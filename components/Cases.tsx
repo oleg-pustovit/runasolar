@@ -118,7 +118,7 @@ export function Cases() {
             >
               {CASES.map((c, i) => (
                 <li
-                  key={c.title}
+                  key={`${c.title}-${i}`}
                   data-case-card
                   className="w-[92%] shrink-0 snap-start sm:w-[60%] lg:w-[calc((100%-2.5rem)/3)]"
                 >
@@ -127,8 +127,9 @@ export function Cases() {
               ))}
             </ul>
 
-            {/* Controls strip — hidden on lg+ where all cards fit in a row */}
-            <div className="mt-6 flex items-center justify-between gap-4 lg:hidden">
+            {/* Controls strip — 4 cards no longer fit in one row on lg,
+                so navigation stays visible on every breakpoint. */}
+            <div className="mt-6 flex items-center justify-between gap-4">
               {/* Dots — one per reachable snap position */}
               {positions > 1 ? (
                 <div className="flex items-center gap-1.5">

@@ -142,6 +142,14 @@ export const CASES: CaseItem[] = [
     image: "",
     video: "/projects/office-1.mp4",
   },
+  {
+    title: "Приватний дім, Хмельницький — 25 кВт",
+    location: "Хмельницький",
+    type: "Дім",
+    power: "25 кВт",
+    image: "",
+    video: "/projects/loc-4.mp4",
+  },
 ];
 
 export const TESTIMONIALS = [
